@@ -10,6 +10,7 @@
 
 #import "Effort.h"
 #import "EffortPoint.h"
+#import "NSString+DateFormatter.h"
 
 @interface GPXFileParser() <NSXMLParserDelegate>
 
@@ -18,7 +19,7 @@
 @property (nonatomic, strong) NSString* currentEffortPointKey;
 @property (nonatomic, strong) NSMutableArray<EffortPoint*>* parsedEffortPoints;
 @property (nonatomic, strong) NSString* title;
-@property (nonatomic, strong) NSString* dateString;
+@property (nonatomic, strong) NSDate* effortDate;
 
 @end
 
@@ -36,7 +37,7 @@
 - (Effort*)createEffortFromCollectedData
 {
     Effort* effort = [[Effort alloc] init];
-    effort.time = [NSDate date];
+    effort.time = self.effortDate;
     effort.title = self.title;
     effort.effortPoints = [self.parsedEffortPoints copy];
     
@@ -48,7 +49,7 @@
 - (void)parserDidStartDocument:(NSXMLParser *)parser
 {
     self.title = nil;
-    self.dateString = nil;
+    self.effortDate = nil;
     self.currentEffortPoint = nil;
     self.parsedEffortPoints = [NSMutableArray new];
     self.currentEffortPointKey = nil;
@@ -86,12 +87,13 @@
         self.currentEffortPoint.elevation = @([string doubleValue]);
     }
     else if ([self.currentEffortPointKey isEqualToString:@"time"]) {
-        //TODO: convert time string to timestamp
+        NSDate* formattedDate = [string formatDateString];
         if (self.currentEffortPoint) {
             // it's the time of the current Element
+            self.currentEffortPoint.pointDate = formattedDate;
         }
         else {
-            
+            self.effortDate = formattedDate;
         }
     }
     else if ([self.currentEffortPointKey isEqualToString:@"gpxtpx:hr"]) {

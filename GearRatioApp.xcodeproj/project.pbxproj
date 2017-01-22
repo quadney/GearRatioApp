@@ -20,6 +20,7 @@
 		C9C1DBF21E354997004962D1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C1DBF11E354997004962D1 /* CoreLocation.framework */; };
 		C9C1DBF51E354B5C004962D1 /* GPXFileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DBF41E354B5C004962D1 /* GPXFileParser.m */; };
 		C9C1DBF71E3559FB004962D1 /* strava_test.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DBF61E3559FB004962D1 /* strava_test.gpx */; };
+		C9C1DBFB1E35704C004962D1 /* NSString+DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DBFA1E35704C004962D1 /* NSString+DateFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		C9C1DBF31E354B5C004962D1 /* GPXFileParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPXFileParser.h; sourceTree = "<group>"; };
 		C9C1DBF41E354B5C004962D1 /* GPXFileParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPXFileParser.m; sourceTree = "<group>"; };
 		C9C1DBF61E3559FB004962D1 /* strava_test.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = strava_test.gpx; path = gpx/strava_test.gpx; sourceTree = "<group>"; };
+		C9C1DBF91E35704C004962D1 /* NSString+DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DateFormatter.h"; sourceTree = "<group>"; };
+		C9C1DBFA1E35704C004962D1 /* NSString+DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DateFormatter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 		C9C1DBC21E354842004962D1 /* GearRatioApp */ = {
 			isa = PBXGroup;
 			children = (
+				C9C1DBF81E357020004962D1 /* helper */,
 				C9C1DBEA1E35489B004962D1 /* Models */,
 				C9C1DBE81E35488D004962D1 /* gpx */,
 				C9C1DBC61E354842004962D1 /* AppDelegate.h */,
@@ -142,6 +146,15 @@
 				C9C1DBF41E354B5C004962D1 /* GPXFileParser.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		C9C1DBF81E357020004962D1 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				C9C1DBF91E35704C004962D1 /* NSString+DateFormatter.h */,
+				C9C1DBFA1E35704C004962D1 /* NSString+DateFormatter.m */,
+			);
+			name = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9C1DBCB1E354842004962D1 /* ViewController.m in Sources */,
+				C9C1DBFB1E35704C004962D1 /* NSString+DateFormatter.m in Sources */,
 				C9C1DBED1E3548B0004962D1 /* Effort.m in Sources */,
 				C9C1DBF51E354B5C004962D1 /* GPXFileParser.m in Sources */,
 				C9C1DBF01E3548C2004962D1 /* EffortPoint.m in Sources */,
