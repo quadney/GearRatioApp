@@ -16,7 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mei-cC-tNu">
+                                <rect key="frame" x="258" y="285" width="85" height="30"/>
+                                <state key="normal" title="Do the thing"/>
+                                <connections>
+                                    <action selector="didPressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OoI-Fa-8wZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mei-cC-tNu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LVo-T1-lkr"/>
+                            <constraint firstItem="Mei-cC-tNu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ly4-2z-3iW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

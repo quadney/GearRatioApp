@@ -24,4 +24,9 @@
     return chainring/cog;
 }
 
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"Effort: %@ gears: %@ effortPoints: %@", self.title, self.gears, self.effortPoints];
+}
+
 @end

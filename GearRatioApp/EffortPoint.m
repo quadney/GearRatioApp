@@ -10,6 +10,19 @@
 
 @implementation EffortPoint
 
+- (id)initWithLatLongAttributes:(NSDictionary<NSString *,NSString *>*)attributes
+{
+    NSAssert([attributes count] == 2, @"Passed in attributes expect only 2 values");
+    self = [super init];
+    if (self) {
+        NSString* lat = attributes[@"lat"];
+        NSString* lon = attributes[@"lon"];
+        _location = [[CLLocation alloc] initWithLatitude:[lat doubleValue] longitude:[lon doubleValue]];
+    }
+    
+    return self;
+}
+
 - (float)speedAtGearRatio:(float)gearRatio
 {
     NSAssert(self.cadence, @"Cadence cannot be nil");
@@ -18,6 +31,11 @@
     // 0.79 is the standard 700c tire diameter
     //TODO: change this later if incorporate different tire sizes...
     return 0.79f * [self.cadence floatValue] * gearRatio;
+}
+
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"Effort point with lat: %f long: %f cadence: %li heartrate: %li elevation: %f", self.location.coordinate.latitude, self.location.coordinate.longitude, (long) [self.cadence integerValue], (long) [self.heartrate integerValue], [self.elevation doubleValue]];
 }
 
 @end

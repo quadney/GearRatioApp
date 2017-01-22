@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "Effort.h"
+#import "EffortPoint.h"
 #import "GPXFileParser.h"
 
 @interface ViewController ()
@@ -18,11 +20,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+}
+
+- (IBAction)didPressButton:(id)sender
+{
     // get the file, data, and begin parsing the gpx data
     NSData* fileData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"strava_test" ofType:@"gpx"]];
     GPXFileParser* parser = [[GPXFileParser alloc] init];
-    [parser parseData:fileData];
+    Effort* effort = [parser parseData:fileData];
+    NSLog(@"Returned Effort: %@", effort);
 }
 
 @end
