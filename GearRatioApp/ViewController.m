@@ -11,8 +11,14 @@
 #import "Effort.h"
 #import "EffortPoint.h"
 #import "GPXFileParser.h"
+#import "GraphView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *chainringTextField;
+@property (weak, nonatomic) IBOutlet UITextField *cogTextField;
+@property (weak, nonatomic) IBOutlet GraphView *graphView;
+
+@property (nonatomic, strong) Effort* calculatedEffort;
 
 @end
 
@@ -22,13 +28,22 @@
     [super viewDidLoad];
 }
 
-- (IBAction)didPressButton:(id)sender
+- (IBAction)didPressCalculateButton:(id)sender
+{
+    self.calculatedEffort = [self configureEffortFromFileName:@"strava_1"];
+    
+    [self.graphView setEffort:self.calculatedEffort];
+    [self.graphView setNeedsDisplay];
+}
+
+- (Effort*)configureEffortFromFileName:(NSString*)fileName
 {
     // get the file, data, and begin parsing the gpx data
-    NSData* fileData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"strava_test" ofType:@"gpx"]];
+    NSData* fileData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:fileName ofType:@"gpx"]];
     GPXFileParser* parser = [[GPXFileParser alloc] init];
     Effort* effort = [parser parseData:fileData];
-    NSLog(@"Returned Effort: %@", effort);
+    effort.gears = @[@([self.chainringTextField.text integerValue]), @([self.cogTextField.text integerValue])];
+    return effort;
 }
 
 @end

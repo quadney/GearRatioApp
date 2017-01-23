@@ -21,6 +21,10 @@
 		C9C1DBF51E354B5C004962D1 /* GPXFileParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DBF41E354B5C004962D1 /* GPXFileParser.m */; };
 		C9C1DBF71E3559FB004962D1 /* strava_test.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DBF61E3559FB004962D1 /* strava_test.gpx */; };
 		C9C1DBFB1E35704C004962D1 /* NSString+DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DBFA1E35704C004962D1 /* NSString+DateFormatter.m */; };
+		C9C1DBFE1E3588C2004962D1 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DBFD1E3588C2004962D1 /* GraphView.m */; };
+		C9C1DC021E35C96C004962D1 /* strava_1.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DBFF1E35C96C004962D1 /* strava_1.gpx */; };
+		C9C1DC031E35C96C004962D1 /* strava_2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DC001E35C96C004962D1 /* strava_2.gpx */; };
+		C9C1DC041E35C96C004962D1 /* strava_3.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DC011E35C96C004962D1 /* strava_3.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,11 @@
 		C9C1DBF61E3559FB004962D1 /* strava_test.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = strava_test.gpx; path = gpx/strava_test.gpx; sourceTree = "<group>"; };
 		C9C1DBF91E35704C004962D1 /* NSString+DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DateFormatter.h"; sourceTree = "<group>"; };
 		C9C1DBFA1E35704C004962D1 /* NSString+DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DateFormatter.m"; sourceTree = "<group>"; };
+		C9C1DBFC1E3588C2004962D1 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		C9C1DBFD1E3588C2004962D1 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		C9C1DBFF1E35C96C004962D1 /* strava_1.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = strava_1.gpx; path = gpx/strava_1.gpx; sourceTree = "<group>"; };
+		C9C1DC001E35C96C004962D1 /* strava_2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = strava_2.gpx; path = gpx/strava_2.gpx; sourceTree = "<group>"; };
+		C9C1DC011E35C96C004962D1 /* strava_3.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = strava_3.gpx; path = gpx/strava_3.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +120,14 @@
 				C9C1DBCC1E354842004962D1 /* Main.storyboard */,
 				C9C1DBCF1E354842004962D1 /* Assets.xcassets */,
 				C9C1DBD11E354842004962D1 /* LaunchScreen.storyboard */,
+				C9C1DBFF1E35C96C004962D1 /* strava_1.gpx */,
+				C9C1DC001E35C96C004962D1 /* strava_2.gpx */,
+				C9C1DC011E35C96C004962D1 /* strava_3.gpx */,
 				C9C1DBF61E3559FB004962D1 /* strava_test.gpx */,
 				C9C1DBD41E354842004962D1 /* Info.plist */,
 				C9C1DBC31E354842004962D1 /* Supporting Files */,
+				C9C1DBFC1E3588C2004962D1 /* GraphView.h */,
+				C9C1DBFD1E3588C2004962D1 /* GraphView.m */,
 			);
 			path = GearRatioApp;
 			sourceTree = "<group>";
@@ -239,8 +253,11 @@
 			files = (
 				C9C1DBD31E354842004962D1 /* LaunchScreen.storyboard in Resources */,
 				C9C1DBD01E354842004962D1 /* Assets.xcassets in Resources */,
+				C9C1DC021E35C96C004962D1 /* strava_1.gpx in Resources */,
 				C9C1DBE91E35488D004962D1 /* gpx in Resources */,
+				C9C1DC041E35C96C004962D1 /* strava_3.gpx in Resources */,
 				C9C1DBCE1E354842004962D1 /* Main.storyboard in Resources */,
+				C9C1DC031E35C96C004962D1 /* strava_2.gpx in Resources */,
 				C9C1DBF71E3559FB004962D1 /* strava_test.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +280,7 @@
 				C9C1DBFB1E35704C004962D1 /* NSString+DateFormatter.m in Sources */,
 				C9C1DBED1E3548B0004962D1 /* Effort.m in Sources */,
 				C9C1DBF51E354B5C004962D1 /* GPXFileParser.m in Sources */,
+				C9C1DBFE1E3588C2004962D1 /* GraphView.m in Sources */,
 				C9C1DBF01E3548C2004962D1 /* EffortPoint.m in Sources */,
 				C9C1DBC81E354842004962D1 /* AppDelegate.m in Sources */,
 				C9C1DBC51E354842004962D1 /* main.m in Sources */,

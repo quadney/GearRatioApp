@@ -35,7 +35,7 @@
 
 - (NSString*)description
 {
-    return [NSString stringWithFormat:@"Effort point with lat: %f long: %f cadence: %li heartrate: %li elevation: %f", self.location.coordinate.latitude, self.location.coordinate.longitude, (long) [self.cadence integerValue], (long) [self.heartrate integerValue], [self.elevation doubleValue]];
+    return [NSString stringWithFormat:@"Effort point with lat: %f long: %f cadence: %li heartrate: %li elevation: %f time: %@", self.location.coordinate.latitude, self.location.coordinate.longitude, (long) [self.cadence integerValue], (long) [self.heartrate integerValue], [self.elevation doubleValue], self.pointDate];
 }
 
 @end
