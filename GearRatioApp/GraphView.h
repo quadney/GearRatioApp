@@ -13,5 +13,6 @@
 @interface GraphView : UIView
 
 - (void)setEffort:(Effort*)effort;
+- (void)didPan:(UIGestureRecognizer*)gestureRecognizer;
 
 @end

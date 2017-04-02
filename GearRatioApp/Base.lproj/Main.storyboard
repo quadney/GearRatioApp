@@ -59,6 +59,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oi7-T3-YBp" customClass="GraphView">
                                 <rect key="frame" x="20" y="136" width="560" height="290"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="290" id="pt7-5p-umS"/>
                                 </constraints>

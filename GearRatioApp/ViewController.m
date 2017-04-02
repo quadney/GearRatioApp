@@ -13,7 +13,7 @@
 #import "GPXFileParser.h"
 #import "GraphView.h"
 
-@interface ViewController ()
+@interface ViewController () <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *chainringTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cogTextField;
 @property (weak, nonatomic) IBOutlet GraphView *graphView;
@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.graphView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self.graphView action:@selector(didPan:)]];
 }
 
 - (IBAction)didPressCalculateButton:(id)sender

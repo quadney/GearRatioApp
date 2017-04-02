@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSArray<EffortPoint*>* effortPoints;
 
 - (float)gearRatio;
+- (Effort*)createSubEffortFromFirstDate:(NSDate*)date1 date:(NSDate*)date2;
 
 @end
