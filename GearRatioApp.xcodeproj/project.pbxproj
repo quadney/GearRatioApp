@@ -25,6 +25,7 @@
 		C9C1DC021E35C96C004962D1 /* strava_1.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DBFF1E35C96C004962D1 /* strava_1.gpx */; };
 		C9C1DC031E35C96C004962D1 /* strava_2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DC001E35C96C004962D1 /* strava_2.gpx */; };
 		C9C1DC041E35C96C004962D1 /* strava_3.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DC011E35C96C004962D1 /* strava_3.gpx */; };
+		CDBFF8571E921777009E8A0C /* AnalyzeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDBFF8561E921777009E8A0C /* AnalyzeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		C9C1DBFF1E35C96C004962D1 /* strava_1.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = strava_1.gpx; path = gpx/strava_1.gpx; sourceTree = "<group>"; };
 		C9C1DC001E35C96C004962D1 /* strava_2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = strava_2.gpx; path = gpx/strava_2.gpx; sourceTree = "<group>"; };
 		C9C1DC011E35C96C004962D1 /* strava_3.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = strava_3.gpx; path = gpx/strava_3.gpx; sourceTree = "<group>"; };
+		CDBFF8551E921777009E8A0C /* AnalyzeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyzeViewController.h; sourceTree = "<group>"; };
+		CDBFF8561E921777009E8A0C /* AnalyzeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyzeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				C9C1DBC31E354842004962D1 /* Supporting Files */,
 				C9C1DBFC1E3588C2004962D1 /* GraphView.h */,
 				C9C1DBFD1E3588C2004962D1 /* GraphView.m */,
+				CDBFF8551E921777009E8A0C /* AnalyzeViewController.h */,
+				CDBFF8561E921777009E8A0C /* AnalyzeViewController.m */,
 			);
 			path = GearRatioApp;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9C1DBCB1E354842004962D1 /* ViewController.m in Sources */,
+				CDBFF8571E921777009E8A0C /* AnalyzeViewController.m in Sources */,
 				C9C1DBFB1E35704C004962D1 /* NSString+DateFormatter.m in Sources */,
 				C9C1DBED1E3548B0004962D1 /* Effort.m in Sources */,
 				C9C1DBF51E354B5C004962D1 /* GPXFileParser.m in Sources */,
@@ -472,6 +478,7 @@
 				C9C1DBE41E354842004962D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9C1DBE51E354842004962D1 /* Build configuration list for PBXNativeTarget "GearRatioAppTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +487,7 @@
 				C9C1DBE71E354842004962D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

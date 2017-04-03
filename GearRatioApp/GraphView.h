@@ -12,7 +12,9 @@
 
 @interface GraphView : UIView
 
-- (void)setEffort:(Effort*)effort;
+@property (nonatomic, strong) Effort* effort;
+
 - (void)didPan:(UIGestureRecognizer*)gestureRecognizer;
+- (void)shoudEnableSelectionGesture:(BOOL)enabled;
 
 @end

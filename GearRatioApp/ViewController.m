@@ -8,15 +8,15 @@
 
 #import "ViewController.h"
 
+#import "AnalyzeViewController.h"
 #import "Effort.h"
 #import "EffortPoint.h"
 #import "GPXFileParser.h"
 #import "GraphView.h"
 
 @interface ViewController () <UIGestureRecognizerDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *chainringTextField;
-@property (weak, nonatomic) IBOutlet UITextField *cogTextField;
 @property (weak, nonatomic) IBOutlet GraphView *graphView;
+@property (weak, nonatomic) IBOutlet UIButton *analyzeButton;
 
 @property (nonatomic, strong) Effort* calculatedEffort;
 
@@ -27,6 +27,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.graphView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self.graphView action:@selector(didPan:)]];
+    
+    [self configureAnalyzeButton];
 }
 
 - (IBAction)didPressCalculateButton:(id)sender
@@ -35,6 +37,8 @@
     
     [self.graphView setEffort:self.calculatedEffort];
     [self.graphView setNeedsDisplay];
+    
+    [self configureAnalyzeButton];
 }
 
 - (Effort*)configureEffortFromFileName:(NSString*)fileName
@@ -42,9 +46,21 @@
     // get the file, data, and begin parsing the gpx data
     NSData* fileData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:fileName ofType:@"gpx"]];
     GPXFileParser* parser = [[GPXFileParser alloc] init];
-    Effort* effort = [parser parseData:fileData];
-    effort.gears = @[@([self.chainringTextField.text integerValue]), @([self.cogTextField.text integerValue])];
-    return effort;
+    return [parser parseData:fileData];
+}
+
+- (void)configureAnalyzeButton
+{
+    [self.analyzeButton setEnabled:self.calculatedEffort ? YES : NO];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:NSStringFromClass([AnalyzeViewController class])]) {
+        AnalyzeViewController* analyzeVC = (AnalyzeViewController*)[segue destinationViewController];
+        // this is terrible design but whatever
+        [analyzeVC setEffort:self.graphView.effort];
+    }
 }
 
 @end
