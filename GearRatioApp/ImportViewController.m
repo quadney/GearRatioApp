@@ -32,6 +32,8 @@
     [self.graphView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self.graphView action:@selector(didPan:)]];
     
     [self configureAnalyzeButton];
+    
+    [self didPressResetButton:self];
 }
 
 - (IBAction)didPressResetButton:(id)sender

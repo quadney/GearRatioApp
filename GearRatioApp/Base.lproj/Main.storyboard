@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XkH-rq-f0I"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zio-zH-l6X"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRU-b1-WaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,8 +70,7 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-4x-H6r">
                                 <rect key="frame" x="76" y="429" width="94" height="29"/>
                                 <connections>
-                                    <action selector="didChangeChainring:" destination="sA3-MV-jEB" eventType="valueChanged" id="EEc-xH-pIm"/>
-                                    <action selector="didChangeChainring:" destination="BYZ-38-t0r" eventType="valueChanged" id="zwU-FG-ic6"/>
+                                    <action selector="didChangeChainring:" destination="BYZ-38-t0r" eventType="valueChanged" id="BGv-uz-GuF"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZS7-Jq-YRg">
@@ -87,7 +86,6 @@
                                 <rect key="frame" x="205" y="429" width="94" height="29"/>
                                 <connections>
                                     <action selector="didChangeCog:" destination="BYZ-38-t0r" eventType="valueChanged" id="dP1-qq-cWx"/>
-                                    <action selector="didChangeCog:" destination="sA3-MV-jEB" eventType="valueChanged" id="f9V-PM-VSG"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkN-eL-4xU">
@@ -131,9 +129,7 @@
                     <connections>
                         <outlet property="analyzeButton" destination="Cpo-lm-uHq" id="kFD-nb-7ad"/>
                         <outlet property="chainringLabel" destination="fTP-pq-dIw" id="juM-rC-hFY"/>
-                        <outlet property="chainringStepper" destination="nBT-4x-H6r" id="9cK-IT-xVZ"/>
                         <outlet property="cogLabel" destination="ZS7-Jq-YRg" id="JTe-2g-R0Z"/>
-                        <outlet property="cogStepper" destination="MCd-e7-fB8" id="alq-BS-1lf"/>
                         <outlet property="graphView" destination="Oi7-T3-YBp" id="nrl-bf-TKk"/>
                     </connections>
                 </viewController>
@@ -300,15 +296,11 @@
                     </view>
                     <connections>
                         <outlet property="cadenceChangeLabel" destination="BTq-px-Zxb" id="hjM-RH-fcv"/>
-                        <outlet property="cadenceStepper" destination="yAV-kp-Zor" id="525-OS-3Yx"/>
                         <outlet property="chainringChangeLabel" destination="1if-tL-oFU" id="7XV-bl-Dmq"/>
-                        <outlet property="chainringStepper" destination="Sqx-cV-fxa" id="ER4-qV-D0Q"/>
                         <outlet property="cogChangeLabel" destination="JgA-J2-B3F" id="wtn-Om-fjc"/>
-                        <outlet property="cogStepper" destination="2HH-no-03Q" id="jPt-d8-iet"/>
                         <outlet property="dataTextView" destination="Ori-XK-lyU" id="Wu4-iU-M0c"/>
                         <outlet property="graphView" destination="i5M-Dr-Krb" id="Zzl-xq-Wm4"/>
                         <outlet property="speedChangeLabel" destination="n53-kv-UMr" id="EJm-MW-dDf"/>
-                        <outlet property="speedStepper" destination="W7P-5q-1KV" id="IVa-kB-zNu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmQ-Gw-zgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
