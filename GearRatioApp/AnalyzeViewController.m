@@ -10,12 +10,18 @@
 
 #import "GraphView.h"
 
-@interface AnalyzeViewController () <UIPickerViewDelegate, UIPickerViewDataSource>
-@property (weak, nonatomic) IBOutlet UIPickerView *gearPickerView;
+@interface AnalyzeViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *dataTextView;
 @property (weak, nonatomic) IBOutlet GraphView *graphView;
 
-@property (strong, nonatomic) NSArray* chainrings;
-@property (strong, nonatomic) NSArray* cogs;
+@property (weak, nonatomic) IBOutlet UILabel *chainringChangeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cogChangeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cadenceChangeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *speedChangeLabel;
+
+@property (strong, nonatomic) Effort *recordedEffort;
+@property (strong, nonatomic) Effort *changedEffort;
+
 @end
 
 @implementation AnalyzeViewController
@@ -26,52 +32,28 @@
     [self.graphView setEffort:self.effort];
     [self.graphView setNeedsDisplay];
     
-    self.chainrings = @[@54, @53, @52, @51, @50, @49, @48, @47, @46];
-    self.cogs = @[@17, @16, @15, @14, @13, @12, @11];
+    // ensure that recordedEffort exists
+    // set changedEffort to be a copy of recordedEffort
+    
+    // setup speed/cadence min/max/average to reflect recorded data
 }
 
-#pragma mark - UIPickerViewDataSource
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 2;
+- (IBAction)didChangeChainring:(id)sender {
+    // change gear ratio and recalculate
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    switch (component) {
-        case 0:
-            return [self.chainrings count];
-            break;
-        case 1:
-            return [self.cogs count];
-            break;
-        default:
-            return 0;
-            break;
-    }
+- (IBAction)didChangeCog:(id)sender {
+    
 }
 
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    switch (component) {
-        case 0:
-            return [NSString stringWithFormat:@"%li", (long) [self.chainrings[row] integerValue]];
-            break;
-        case 1:
-            return [NSString stringWithFormat:@"%li", (long) [self.cogs[row] integerValue]];
-            break;
-        default:
-            return @"";
-            break;
-    }
+- (IBAction)didChangeCadence:(id)sender {
+    // disable speed if not 0
+    // when cadence is affected, every cadence reading in an Effort Point is affected, as well as the speed
 }
 
-#pragma mark - UIPickerViewDelegate
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    //TODO:
+- (IBAction)didChangeSpeed:(id)sender {
+    // disable cadence if not 0
+    // when speed is affected, every speed reading is an Effort Point is affected, as well as the cadence
 }
 
 @end
