@@ -21,17 +21,22 @@
 @property (weak, nonatomic) IBOutlet UILabel *chainringLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cogLabel;
 
+@property (weak, nonatomic) IBOutlet UIStepper *chainringStepper;
+@property (weak, nonatomic) IBOutlet UIStepper *cogStepper;
+
 @property (nonatomic, strong) Effort* calculatedEffort;
 
 @end
 
 @implementation ImportViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self.graphView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self.graphView action:@selector(didPan:)]];
     
-    [self configureAnalyzeButton];
+    self.chainringLabel.text = [NSString stringWithFormat:@"%lu", (long)self.chainringStepper.value];
+    self.cogLabel.text = [NSString stringWithFormat:@"%lu", (long)self.cogStepper.value];
     
     [self didPressResetButton:self];
 }
@@ -63,17 +68,23 @@
 {
     if ([segue.identifier isEqualToString:NSStringFromClass([AnalyzeViewController class])]) {
         AnalyzeViewController* analyzeVC = (AnalyzeViewController*)[segue destinationViewController];
-        [analyzeVC setEffort:self.graphView.effort];
+        Effort* effort = self.graphView.effort;
+        [effort setGear:@(self.chainringStepper.value) cog:@(self.cogStepper.value)];
+        [analyzeVC setEffort:effort];
     }
 }
 
 #pragma mark - Stepper outlets
 
-- (IBAction)didChangeChainring:(id)sender {
+- (IBAction)didChangeChainring:(id)sender
+{
     // set the gear ratio, and make sure that it affects the graph view's effort
+    self.chainringLabel.text = [NSString stringWithFormat:@"%lu", (long)self.chainringStepper.value];
 }
 
-- (IBAction)didChangeCog:(id)sender {
+- (IBAction)didChangeCog:(id)sender
+{
+    self.cogLabel.text = [NSString stringWithFormat:@"%lu", (long)self.cogStepper.value];
 }
 
 @end

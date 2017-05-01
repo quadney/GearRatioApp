@@ -8,6 +8,7 @@
 
 #import "AnalyzeViewController.h"
 
+#import "Effort.h"
 #import "GraphView.h"
 
 @interface AnalyzeViewController ()
@@ -19,20 +20,30 @@
 @property (weak, nonatomic) IBOutlet UILabel *cadenceChangeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *speedChangeLabel;
 
-@property (strong, nonatomic) Effort *recordedEffort;
+@property (weak, nonatomic) IBOutlet UIStepper *chainringStepper;
+@property (weak, nonatomic) IBOutlet UIStepper *cogStepper;
+@property (weak, nonatomic) IBOutlet UIStepper *cadenceStepper;
+@property (weak, nonatomic) IBOutlet UIStepper *speedStepper;
+
 @property (strong, nonatomic) Effort *changedEffort;
 
 @end
 
 @implementation AnalyzeViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    NSAssert(_recordedEffort, @"_recordedEffort must exist before initializing AnalyzeViewController");
+    NSAssert(_effort, @"_effort must exist before initializing AnalyzeViewController");
     
     [self.graphView setEffort:self.effort];
     [self.graphView setNeedsDisplay];
+    
+    self.chainringStepper.value = self.effort.chainring.doubleValue;
+    self.cogStepper.value = self.effort.cog.doubleValue;
+    
+    [self updateStepperUI];
     
     // set changedEffort to be a copy of recordedEffort
     
@@ -41,22 +52,25 @@
     // setup initial values for stepper and labels
 }
 
-- (IBAction)didChangeChainring:(id)sender {
+#pragma mark - UIStepper configuration
+
+- (void)updateStepperUI
+{
+    [self setLabelText:self.chainringChangeLabel forStepper:self.chainringStepper];
+    [self setLabelText:self.cogChangeLabel forStepper:self.cogStepper];
+    [self setLabelText:self.cadenceChangeLabel forStepper:self.cadenceStepper];
+    [self setLabelText:self.speedChangeLabel forStepper:self.speedStepper];
+}
+
+- (IBAction)didChangeStepperValue:(id)sender
+{
     // change gear ratio and recalculate
+    [self updateStepperUI];
 }
 
-- (IBAction)didChangeCog:(id)sender {
-    
-}
-
-- (IBAction)didChangeCadence:(id)sender {
-    // disable speed if not 0
-    // when cadence is affected, every cadence reading in an Effort Point is affected, as well as the speed
-}
-
-- (IBAction)didChangeSpeed:(id)sender {
-    // disable cadence if not 0
-    // when speed is affected, every speed reading is an Effort Point is affected, as well as the cadence
+- (void)setLabelText:(UILabel*)label forStepper:(UIStepper*)stepper
+{
+    label.text = [NSString stringWithFormat:@"%lu", (long)stepper.value];
 }
 
 @end

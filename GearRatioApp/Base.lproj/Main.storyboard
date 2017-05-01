@@ -59,7 +59,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="49" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTP-pq-dIw">
-                                <rect key="frame" x="75" y="370" width="94" height="51"/>
+                                <rect key="frame" x="76" y="370" width="94" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="Fn9-ai-71l"/>
                                 </constraints>
@@ -67,10 +67,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-4x-H6r">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="49" minimumValue="45" maximumValue="55" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-4x-H6r">
                                 <rect key="frame" x="76" y="429" width="94" height="29"/>
                                 <connections>
-                                    <action selector="didChangeChainring:" destination="BYZ-38-t0r" eventType="valueChanged" id="BGv-uz-GuF"/>
+                                    <action selector="didChangeChainring:" destination="BYZ-38-t0r" eventType="valueChanged" id="cap-A0-ly8"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZS7-Jq-YRg">
@@ -82,14 +82,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="MCd-e7-fB8">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minimumValue="11" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="MCd-e7-fB8">
                                 <rect key="frame" x="205" y="429" width="94" height="29"/>
                                 <connections>
-                                    <action selector="didChangeCog:" destination="BYZ-38-t0r" eventType="valueChanged" id="dP1-qq-cWx"/>
+                                    <action selector="didChangeCog:" destination="BYZ-38-t0r" eventType="valueChanged" id="TKj-yT-6bH"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkN-eL-4xU">
-                                <rect key="frame" x="76" y="466" width="223" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chainring" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fW-Nm-TZS">
+                                <rect key="frame" x="76" y="466" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUx-eF-xhy">
+                                <rect key="frame" x="205" y="466" width="94" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -97,26 +103,28 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qkN-eL-4xU" firstAttribute="trailing" secondItem="MCd-e7-fB8" secondAttribute="trailing" id="3Oe-lw-6iF"/>
                             <constraint firstItem="Oi7-T3-YBp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3rY-4q-QkU"/>
-                            <constraint firstItem="fTP-pq-dIw" firstAttribute="width" secondItem="nBT-4x-H6r" secondAttribute="width" id="4tm-HQ-iaT"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Oi7-T3-YBp" secondAttribute="leading" id="5T2-Pp-Zqg"/>
-                            <constraint firstItem="MCd-e7-fB8" firstAttribute="leading" secondItem="nBT-4x-H6r" secondAttribute="trailing" constant="35" id="7uY-H1-onG"/>
-                            <constraint firstItem="qkN-eL-4xU" firstAttribute="leading" secondItem="nBT-4x-H6r" secondAttribute="leading" id="8qM-ef-VbW"/>
                             <constraint firstItem="fTP-pq-dIw" firstAttribute="top" secondItem="Oi7-T3-YBp" secondAttribute="bottom" constant="8" id="Agk-j5-abV"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cpo-lm-uHq" secondAttribute="bottom" constant="20" id="E9a-RZ-iSg"/>
                             <constraint firstItem="ZS7-Jq-YRg" firstAttribute="top" secondItem="Oi7-T3-YBp" secondAttribute="bottom" constant="8" id="EpG-TC-RvX"/>
                             <constraint firstItem="MCd-e7-fB8" firstAttribute="top" secondItem="ZS7-Jq-YRg" secondAttribute="bottom" constant="8" id="HdP-EI-dqv"/>
-                            <constraint firstItem="qkN-eL-4xU" firstAttribute="top" secondItem="nBT-4x-H6r" secondAttribute="bottom" constant="8" id="LGK-Mp-g2l"/>
+                            <constraint firstItem="ZS7-Jq-YRg" firstAttribute="trailing" secondItem="MCd-e7-fB8" secondAttribute="trailing" id="KSn-ej-U5U"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Cpo-lm-uHq" secondAttribute="leading" id="PX6-T8-S9P"/>
-                            <constraint firstItem="fTP-pq-dIw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="S8g-7N-401"/>
+                            <constraint firstItem="ZS7-Jq-YRg" firstAttribute="leading" secondItem="MCd-e7-fB8" secondAttribute="leading" id="S3W-Gq-5K1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Oi7-T3-YBp" secondAttribute="trailing" id="SVs-mY-Jor"/>
-                            <constraint firstItem="ZS7-Jq-YRg" firstAttribute="width" secondItem="MCd-e7-fB8" secondAttribute="width" id="Tdb-93-LIf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZS7-Jq-YRg" secondAttribute="trailing" constant="60" id="dnF-45-SjK"/>
+                            <constraint firstItem="fTP-pq-dIw" firstAttribute="trailing" secondItem="nBT-4x-H6r" secondAttribute="trailing" id="Tdy-O3-dfV"/>
                             <constraint firstItem="nBT-4x-H6r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="fmL-n2-rq4"/>
                             <constraint firstItem="nBT-4x-H6r" firstAttribute="top" secondItem="fTP-pq-dIw" secondAttribute="bottom" constant="8" id="gJf-1X-JJb"/>
+                            <constraint firstItem="BUx-eF-xhy" firstAttribute="leading" secondItem="MCd-e7-fB8" secondAttribute="leading" id="jsO-I9-FO5"/>
+                            <constraint firstItem="9fW-Nm-TZS" firstAttribute="top" secondItem="nBT-4x-H6r" secondAttribute="bottom" constant="8" id="ldC-qq-r6u"/>
+                            <constraint firstItem="fTP-pq-dIw" firstAttribute="leading" secondItem="nBT-4x-H6r" secondAttribute="leading" id="ljq-si-dfC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MCd-e7-fB8" secondAttribute="trailing" constant="60" id="mwd-Yw-fqL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Cpo-lm-uHq" secondAttribute="trailing" id="qOx-Hd-fRJ"/>
+                            <constraint firstItem="BUx-eF-xhy" firstAttribute="top" secondItem="MCd-e7-fB8" secondAttribute="bottom" constant="8" id="s8A-WU-opz"/>
+                            <constraint firstItem="9fW-Nm-TZS" firstAttribute="leading" secondItem="nBT-4x-H6r" secondAttribute="leading" id="sHj-Pv-TeK"/>
+                            <constraint firstItem="BUx-eF-xhy" firstAttribute="trailing" secondItem="MCd-e7-fB8" secondAttribute="trailing" id="umb-sV-AhS"/>
+                            <constraint firstItem="9fW-Nm-TZS" firstAttribute="trailing" secondItem="nBT-4x-H6r" secondAttribute="trailing" id="xOr-z2-i7y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SkE-fz-1qP">
@@ -128,8 +136,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="analyzeButton" destination="Cpo-lm-uHq" id="kFD-nb-7ad"/>
-                        <outlet property="chainringLabel" destination="fTP-pq-dIw" id="juM-rC-hFY"/>
-                        <outlet property="cogLabel" destination="ZS7-Jq-YRg" id="JTe-2g-R0Z"/>
+                        <outlet property="chainringLabel" destination="fTP-pq-dIw" id="Dqi-eu-t40"/>
+                        <outlet property="chainringStepper" destination="nBT-4x-H6r" id="FYW-qc-BPN"/>
+                        <outlet property="cogLabel" destination="ZS7-Jq-YRg" id="o5B-yL-CW7"/>
+                        <outlet property="cogStepper" destination="MCd-e7-fB8" id="TNa-PN-OUt"/>
                         <outlet property="graphView" destination="Oi7-T3-YBp" id="nrl-bf-TKk"/>
                     </connections>
                 </viewController>
@@ -166,8 +176,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="49" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1if-tL-oFU">
-                                <rect key="frame" x="75" y="405" width="94" height="51"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="53" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1if-tL-oFU">
+                                <rect key="frame" x="76" y="405" width="94" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="hXo-7V-FfH"/>
                                 </constraints>
@@ -175,13 +185,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Sqx-cV-fxa">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="49" minimumValue="45" maximumValue="55" translatesAutoresizingMaskIntoConstraints="NO" id="Sqx-cV-fxa">
                                 <rect key="frame" x="76" y="464" width="94" height="29"/>
                                 <connections>
-                                    <action selector="didChangeChainring:" destination="sA3-MV-jEB" eventType="valueChanged" id="tzD-1t-6iB"/>
+                                    <action selector="didChangeStepperValue:" destination="sA3-MV-jEB" eventType="valueChanged" id="cIb-jx-86e"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgA-J2-B3F">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgA-J2-B3F">
                                 <rect key="frame" x="205" y="405" width="94" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="p38-pg-t6C"/>
@@ -190,10 +200,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="2HH-no-03Q">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minimumValue="11" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="2HH-no-03Q">
                                 <rect key="frame" x="205" y="464" width="94" height="29"/>
                                 <connections>
-                                    <action selector="didChangeCog:" destination="sA3-MV-jEB" eventType="valueChanged" id="cLr-pS-2Zc"/>
+                                    <action selector="didChangeStepperValue:" destination="sA3-MV-jEB" eventType="valueChanged" id="Lft-BC-AQp"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGP-f0-NGn">
@@ -221,7 +231,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTq-px-Zxb">
-                                <rect key="frame" x="76" y="530" width="94" height="51"/>
+                                <rect key="frame" x="77" y="530" width="94" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="oLf-h5-MzS"/>
                                 </constraints>
@@ -229,10 +239,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yAV-kp-Zor">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-100" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="yAV-kp-Zor">
                                 <rect key="frame" x="77" y="589" width="94" height="29"/>
                                 <connections>
-                                    <action selector="didChangeCadence:" destination="sA3-MV-jEB" eventType="valueChanged" id="aZK-rS-CFV"/>
+                                    <action selector="didChangeStepperValue:" destination="sA3-MV-jEB" eventType="valueChanged" id="96u-Va-oOf"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n53-kv-UMr">
@@ -244,10 +254,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-5q-1KV">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-30" maximumValue="30" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-5q-1KV">
                                 <rect key="frame" x="206" y="589" width="94" height="29"/>
                                 <connections>
-                                    <action selector="didChangeSpeed:" destination="sA3-MV-jEB" eventType="valueChanged" id="1Gr-iY-K7n"/>
+                                    <action selector="didChangeStepperValue:" destination="sA3-MV-jEB" eventType="valueChanged" id="ml5-A0-09f"/>
                                 </connections>
                             </stepper>
                         </subviews>
@@ -256,24 +266,24 @@
                             <constraint firstItem="JgA-J2-B3F" firstAttribute="top" secondItem="Ori-XK-lyU" secondAttribute="bottom" constant="8" id="2db-AJ-9fQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2HH-no-03Q" secondAttribute="trailing" constant="60" id="4L0-iS-6ZZ"/>
                             <constraint firstItem="Sqx-cV-fxa" firstAttribute="top" secondItem="1if-tL-oFU" secondAttribute="bottom" constant="8" id="5Qq-EA-IFi"/>
+                            <constraint firstItem="n53-kv-UMr" firstAttribute="leading" secondItem="W7P-5q-1KV" secondAttribute="leading" id="5X4-0J-VNO"/>
                             <constraint firstItem="ib2-L0-o5x" firstAttribute="top" secondItem="W7P-5q-1KV" secondAttribute="bottom" constant="8" id="5ef-yM-Kye"/>
                             <constraint firstItem="yAV-kp-Zor" firstAttribute="leading" secondItem="pmV-jJ-bev" secondAttribute="leadingMargin" constant="61" id="76C-kV-Avi"/>
+                            <constraint firstItem="1if-tL-oFU" firstAttribute="leading" secondItem="Sqx-cV-fxa" secondAttribute="leading" id="8JC-qA-3F3"/>
                             <constraint firstItem="ldC-gw-MvR" firstAttribute="top" secondItem="UOb-El-J1N" secondAttribute="bottom" constant="20" id="8pB-dg-Idi"/>
                             <constraint firstItem="UOb-El-J1N" firstAttribute="trailing" secondItem="yAV-kp-Zor" secondAttribute="trailing" id="9t5-Dz-I4w"/>
                             <constraint firstItem="yAV-kp-Zor" firstAttribute="top" secondItem="BTq-px-Zxb" secondAttribute="bottom" constant="8" id="AYM-V5-SPE"/>
                             <constraint firstItem="JGP-f0-NGn" firstAttribute="top" secondItem="Sqx-cV-fxa" secondAttribute="bottom" constant="8" id="B0P-EY-cv9"/>
+                            <constraint firstItem="n53-kv-UMr" firstAttribute="trailing" secondItem="W7P-5q-1KV" secondAttribute="trailing" id="Evh-lj-mQ7"/>
                             <constraint firstItem="UOb-El-J1N" firstAttribute="leading" secondItem="yAV-kp-Zor" secondAttribute="leading" id="Fgj-nS-c6T"/>
-                            <constraint firstItem="W7P-5q-1KV" firstAttribute="leading" secondItem="yAV-kp-Zor" secondAttribute="trailing" constant="35" id="H9y-5n-UjK"/>
-                            <constraint firstItem="1if-tL-oFU" firstAttribute="leading" secondItem="pmV-jJ-bev" secondAttribute="leadingMargin" constant="59" id="HtV-7u-9PK"/>
+                            <constraint firstItem="BTq-px-Zxb" firstAttribute="leading" secondItem="yAV-kp-Zor" secondAttribute="leading" id="KYB-5R-lA4"/>
+                            <constraint firstItem="JgA-J2-B3F" firstAttribute="trailing" secondItem="2HH-no-03Q" secondAttribute="trailing" id="Mg6-ue-MBO"/>
                             <constraint firstItem="ldC-gw-MvR" firstAttribute="top" secondItem="ib2-L0-o5x" secondAttribute="bottom" constant="20" id="Mrd-wC-jJQ"/>
-                            <constraint firstItem="BTq-px-Zxb" firstAttribute="leading" secondItem="pmV-jJ-bev" secondAttribute="leadingMargin" constant="60" id="NOm-kB-TVN"/>
-                            <constraint firstItem="2HH-no-03Q" firstAttribute="leading" secondItem="Sqx-cV-fxa" secondAttribute="trailing" constant="35" id="Qs4-Oa-hcI"/>
                             <constraint firstItem="i5M-Dr-Krb" firstAttribute="trailing" secondItem="pmV-jJ-bev" secondAttribute="trailingMargin" id="SEO-sB-1Z4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JgA-J2-B3F" secondAttribute="trailing" constant="60" id="SFa-lz-p9e"/>
                             <constraint firstItem="i5M-Dr-Krb" firstAttribute="leading" secondItem="pmV-jJ-bev" secondAttribute="leadingMargin" id="SlT-UH-KUo"/>
                             <constraint firstItem="W7P-5q-1KV" firstAttribute="top" secondItem="n53-kv-UMr" secondAttribute="bottom" constant="8" id="Sp6-Ny-tmI"/>
+                            <constraint firstItem="JgA-J2-B3F" firstAttribute="leading" secondItem="2HH-no-03Q" secondAttribute="leading" id="Teo-El-303"/>
                             <constraint firstItem="BTq-px-Zxb" firstAttribute="top" secondItem="JGP-f0-NGn" secondAttribute="bottom" constant="8" id="UYL-tq-I2E"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="n53-kv-UMr" secondAttribute="trailing" constant="59" id="W3K-eO-LMj"/>
                             <constraint firstItem="1if-tL-oFU" firstAttribute="top" secondItem="Ori-XK-lyU" secondAttribute="bottom" constant="8" id="Wcl-Kk-wGn"/>
                             <constraint firstItem="ib2-L0-o5x" firstAttribute="trailing" secondItem="W7P-5q-1KV" secondAttribute="trailing" id="Wgl-cT-h0T"/>
                             <constraint firstItem="BTq-px-Zxb" firstAttribute="width" secondItem="yAV-kp-Zor" secondAttribute="width" id="Ybp-KE-8GC"/>
@@ -281,6 +291,8 @@
                             <constraint firstItem="Ori-XK-lyU" firstAttribute="top" secondItem="i5M-Dr-Krb" secondAttribute="bottom" constant="8" id="bXG-o6-iEp"/>
                             <constraint firstItem="1if-tL-oFU" firstAttribute="width" secondItem="Sqx-cV-fxa" secondAttribute="width" id="dMJ-o3-xST"/>
                             <constraint firstItem="UOb-El-J1N" firstAttribute="top" secondItem="yAV-kp-Zor" secondAttribute="bottom" constant="8" id="haC-JG-pH5"/>
+                            <constraint firstItem="1if-tL-oFU" firstAttribute="trailing" secondItem="Sqx-cV-fxa" secondAttribute="trailing" id="j4h-HA-58x"/>
+                            <constraint firstItem="BTq-px-Zxb" firstAttribute="trailing" secondItem="yAV-kp-Zor" secondAttribute="trailing" id="kr3-ei-Rgu"/>
                             <constraint firstItem="ib2-L0-o5x" firstAttribute="leading" secondItem="W7P-5q-1KV" secondAttribute="leading" id="ouB-eY-27h"/>
                             <constraint firstItem="n53-kv-UMr" firstAttribute="width" secondItem="W7P-5q-1KV" secondAttribute="width" id="qJU-kp-bfV"/>
                             <constraint firstItem="i5M-Dr-Krb" firstAttribute="top" secondItem="r3w-KR-O6P" secondAttribute="bottom" constant="8" id="rvM-eF-AJW"/>
@@ -296,11 +308,15 @@
                     </view>
                     <connections>
                         <outlet property="cadenceChangeLabel" destination="BTq-px-Zxb" id="hjM-RH-fcv"/>
+                        <outlet property="cadenceStepper" destination="yAV-kp-Zor" id="iEU-UA-wUP"/>
                         <outlet property="chainringChangeLabel" destination="1if-tL-oFU" id="7XV-bl-Dmq"/>
+                        <outlet property="chainringStepper" destination="Sqx-cV-fxa" id="o7t-vG-LnY"/>
                         <outlet property="cogChangeLabel" destination="JgA-J2-B3F" id="wtn-Om-fjc"/>
+                        <outlet property="cogStepper" destination="2HH-no-03Q" id="nhO-t3-VhC"/>
                         <outlet property="dataTextView" destination="Ori-XK-lyU" id="Wu4-iU-M0c"/>
                         <outlet property="graphView" destination="i5M-Dr-Krb" id="Zzl-xq-Wm4"/>
                         <outlet property="speedChangeLabel" destination="n53-kv-UMr" id="EJm-MW-dDf"/>
+                        <outlet property="speedStepper" destination="W7P-5q-1KV" id="8uX-b0-Y3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmQ-Gw-zgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
