@@ -29,13 +29,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSAssert(_recordedEffort, @"_recordedEffort must exist before initializing AnalyzeViewController");
+    
     [self.graphView setEffort:self.effort];
     [self.graphView setNeedsDisplay];
     
-    // ensure that recordedEffort exists
     // set changedEffort to be a copy of recordedEffort
     
     // setup speed/cadence min/max/average to reflect recorded data
+    
+    // setup initial values for stepper and labels
 }
 
 - (IBAction)didChangeChainring:(id)sender {
