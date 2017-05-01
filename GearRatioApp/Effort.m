@@ -12,23 +12,25 @@
 
 @implementation Effort
 
+- (void)setGear:(NSNumber*)chainring cog:(NSNumber*)cog
+{
+    [self setChainring:chainring];
+    [self setCog:cog];
+}
+
 - (float)gearRatio
 {
-    NSAssert([self.gears count] == 2, @"Gear array not set correctly!");
-    float chainring = [self.gears[0] floatValue];
-    float cog = [self.gears[1] floatValue];
-    
-    if (chainring <= 0 || cog <= 0) {
+    if ([self.chainring integerValue] <= 0 || [self.cog integerValue] <= 0) {
         NSLog(@"Invalid gear data");
-        return 0;
+        return 0.0;
     }
     
-    return chainring/cog;
+    return [self.chainring floatValue] / [self.cog floatValue];
 }
 
 - (NSString*)description
 {
-    return [NSString stringWithFormat:@"Effort: %@ gears: %@ effortPoints: %@", self.title, self.gears, self.effortPoints];
+    return [NSString stringWithFormat:@"Effort: %@ gear: %@x%@ effortPoints: %@", self.title, self.chainring, self.cog, self.effortPoints];
 }
 
 - (Effort*)createSubEffortFromFirstDate:(NSDate*)date1 date:(NSDate*)date2
@@ -60,7 +62,8 @@
     // take the effort points from that range, and return new effort
     NSArray<EffortPoint*>* newPoints = [self.effortPoints subarrayWithRange:NSMakeRange(startIndex, endIndex - startIndex + 1)];
     Effort* newEffort = [[Effort alloc] init];
-    newEffort.gears = [self.gears copy];
+    newEffort.chainring = [self.chainring copy];
+    newEffort.cog = [self.cog copy];
     newEffort.title = @"Sub Effort";
     newEffort.time = self.time;
     newEffort.effortPoints = [newPoints copy];

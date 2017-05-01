@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ImportViewController.h
 //  GearRatioApp
 //
 //  Created by Sydney Richardson on 1/22/17.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ImportViewController : UIViewController
 
 
 @end

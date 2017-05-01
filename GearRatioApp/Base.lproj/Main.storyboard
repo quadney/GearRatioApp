@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-489" y="281"/>
         </scene>
-        <!--View Controller-->
+        <!--Import View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ImportViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -47,7 +47,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpo-lm-uHq">
-                                <rect key="frame" x="16" y="398" width="343" height="50"/>
+                                <rect key="frame" x="16" y="597" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.62479760362694303" green="0.068744785949849674" blue="0.53050476735953511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Q0e-9e-8CK"/>
@@ -58,27 +58,83 @@
                                     <segue destination="sA3-MV-jEB" kind="show" identifier="AnalyzeViewController" id="HgY-oT-FQc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="49" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTP-pq-dIw">
+                                <rect key="frame" x="75" y="370" width="94" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Fn9-ai-71l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-4x-H6r">
+                                <rect key="frame" x="76" y="429" width="94" height="29"/>
+                                <connections>
+                                    <action selector="didChangeChainring:" destination="sA3-MV-jEB" eventType="valueChanged" id="EEc-xH-pIm"/>
+                                    <action selector="didChangeChainring:" destination="BYZ-38-t0r" eventType="valueChanged" id="zwU-FG-ic6"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZS7-Jq-YRg">
+                                <rect key="frame" x="205" y="370" width="94" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="EQ5-DG-tue"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="MCd-e7-fB8">
+                                <rect key="frame" x="205" y="429" width="94" height="29"/>
+                                <connections>
+                                    <action selector="didChangeCog:" destination="BYZ-38-t0r" eventType="valueChanged" id="dP1-qq-cWx"/>
+                                    <action selector="didChangeCog:" destination="sA3-MV-jEB" eventType="valueChanged" id="f9V-PM-VSG"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkN-eL-4xU">
+                                <rect key="frame" x="76" y="466" width="223" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="qkN-eL-4xU" firstAttribute="trailing" secondItem="MCd-e7-fB8" secondAttribute="trailing" id="3Oe-lw-6iF"/>
                             <constraint firstItem="Oi7-T3-YBp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3rY-4q-QkU"/>
+                            <constraint firstItem="fTP-pq-dIw" firstAttribute="width" secondItem="nBT-4x-H6r" secondAttribute="width" id="4tm-HQ-iaT"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Oi7-T3-YBp" secondAttribute="leading" id="5T2-Pp-Zqg"/>
+                            <constraint firstItem="MCd-e7-fB8" firstAttribute="leading" secondItem="nBT-4x-H6r" secondAttribute="trailing" constant="35" id="7uY-H1-onG"/>
+                            <constraint firstItem="qkN-eL-4xU" firstAttribute="leading" secondItem="nBT-4x-H6r" secondAttribute="leading" id="8qM-ef-VbW"/>
+                            <constraint firstItem="fTP-pq-dIw" firstAttribute="top" secondItem="Oi7-T3-YBp" secondAttribute="bottom" constant="8" id="Agk-j5-abV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cpo-lm-uHq" secondAttribute="bottom" constant="20" id="E9a-RZ-iSg"/>
+                            <constraint firstItem="ZS7-Jq-YRg" firstAttribute="top" secondItem="Oi7-T3-YBp" secondAttribute="bottom" constant="8" id="EpG-TC-RvX"/>
+                            <constraint firstItem="MCd-e7-fB8" firstAttribute="top" secondItem="ZS7-Jq-YRg" secondAttribute="bottom" constant="8" id="HdP-EI-dqv"/>
+                            <constraint firstItem="qkN-eL-4xU" firstAttribute="top" secondItem="nBT-4x-H6r" secondAttribute="bottom" constant="8" id="LGK-Mp-g2l"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Cpo-lm-uHq" secondAttribute="leading" id="PX6-T8-S9P"/>
+                            <constraint firstItem="fTP-pq-dIw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="59" id="S8g-7N-401"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Oi7-T3-YBp" secondAttribute="trailing" id="SVs-mY-Jor"/>
+                            <constraint firstItem="ZS7-Jq-YRg" firstAttribute="width" secondItem="MCd-e7-fB8" secondAttribute="width" id="Tdb-93-LIf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZS7-Jq-YRg" secondAttribute="trailing" constant="60" id="dnF-45-SjK"/>
+                            <constraint firstItem="nBT-4x-H6r" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="fmL-n2-rq4"/>
+                            <constraint firstItem="nBT-4x-H6r" firstAttribute="top" secondItem="fTP-pq-dIw" secondAttribute="bottom" constant="8" id="gJf-1X-JJb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MCd-e7-fB8" secondAttribute="trailing" constant="60" id="mwd-Yw-fqL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Cpo-lm-uHq" secondAttribute="trailing" id="qOx-Hd-fRJ"/>
-                            <constraint firstItem="Cpo-lm-uHq" firstAttribute="top" secondItem="Oi7-T3-YBp" secondAttribute="bottom" constant="36" id="xtm-MU-lWn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SkE-fz-1qP">
                         <barButtonItem key="leftBarButtonItem" title="Reset" id="gxU-S5-WG3">
                             <connections>
-                                <action selector="didPressCalculateButton:" destination="BYZ-38-t0r" id="DqF-UH-oUU"/>
+                                <action selector="didPressResetButton:" destination="BYZ-38-t0r" id="qFT-CN-hug"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="analyzeButton" destination="Cpo-lm-uHq" id="o2a-94-7Jb"/>
-                        <outlet property="graphView" destination="Oi7-T3-YBp" id="d9G-gm-pZN"/>
+                        <outlet property="analyzeButton" destination="Cpo-lm-uHq" id="kFD-nb-7ad"/>
+                        <outlet property="chainringLabel" destination="fTP-pq-dIw" id="juM-rC-hFY"/>
+                        <outlet property="chainringStepper" destination="nBT-4x-H6r" id="9cK-IT-xVZ"/>
+                        <outlet property="cogLabel" destination="ZS7-Jq-YRg" id="JTe-2g-R0Z"/>
+                        <outlet property="cogStepper" destination="MCd-e7-fB8" id="alq-BS-1lf"/>
+                        <outlet property="graphView" destination="Oi7-T3-YBp" id="nrl-bf-TKk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

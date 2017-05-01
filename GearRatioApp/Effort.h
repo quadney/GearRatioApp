@@ -13,11 +13,13 @@
 @interface Effort : NSObject
 
 @property (nonatomic, strong) NSString* title;
-@property (nonatomic, strong) NSArray<NSNumber*>* gears;
+@property (nonatomic, strong) NSNumber* chainring;
+@property (nonatomic, strong) NSNumber* cog;
 @property (nonatomic, strong) NSDate* time;
 @property (nonatomic, strong) NSArray<EffortPoint*>* effortPoints;
 
 - (float)gearRatio;
 - (Effort*)createSubEffortFromFirstDate:(NSDate*)date1 date:(NSDate*)date2;
+- (void)setGear:(NSNumber*)chainring cog:(NSNumber*)cog;
 
 @end

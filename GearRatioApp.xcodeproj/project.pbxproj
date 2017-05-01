@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C9C1DBC51E354842004962D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DBC41E354842004962D1 /* main.m */; };
 		C9C1DBC81E354842004962D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DBC71E354842004962D1 /* AppDelegate.m */; };
-		C9C1DBCB1E354842004962D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DBCA1E354842004962D1 /* ViewController.m */; };
+		C9C1DBCB1E354842004962D1 /* ImportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C1DBCA1E354842004962D1 /* ImportViewController.m */; };
 		C9C1DBCE1E354842004962D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DBCC1E354842004962D1 /* Main.storyboard */; };
 		C9C1DBD01E354842004962D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DBCF1E354842004962D1 /* Assets.xcassets */; };
 		C9C1DBD31E354842004962D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C1DBD11E354842004962D1 /* LaunchScreen.storyboard */; };
@@ -43,8 +43,8 @@
 		C9C1DBC41E354842004962D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9C1DBC61E354842004962D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9C1DBC71E354842004962D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C9C1DBC91E354842004962D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C9C1DBCA1E354842004962D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C9C1DBC91E354842004962D1 /* ImportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImportViewController.h; sourceTree = "<group>"; };
+		C9C1DBCA1E354842004962D1 /* ImportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImportViewController.m; sourceTree = "<group>"; };
 		C9C1DBCD1E354842004962D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9C1DBCF1E354842004962D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9C1DBD21E354842004962D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,8 +118,8 @@
 				C9C1DBE81E35488D004962D1 /* gpx */,
 				C9C1DBC61E354842004962D1 /* AppDelegate.h */,
 				C9C1DBC71E354842004962D1 /* AppDelegate.m */,
-				C9C1DBC91E354842004962D1 /* ViewController.h */,
-				C9C1DBCA1E354842004962D1 /* ViewController.m */,
+				C9C1DBC91E354842004962D1 /* ImportViewController.h */,
+				C9C1DBCA1E354842004962D1 /* ImportViewController.m */,
 				C9C1DBCC1E354842004962D1 /* Main.storyboard */,
 				C9C1DBCF1E354842004962D1 /* Assets.xcassets */,
 				C9C1DBD11E354842004962D1 /* LaunchScreen.storyboard */,
@@ -220,7 +220,7 @@
 		C9C1DBB81E354842004962D1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Sydney Richardson";
 				TargetAttributes = {
 					C9C1DBBF1E354842004962D1 = {
@@ -281,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9C1DBCB1E354842004962D1 /* ViewController.m in Sources */,
+				C9C1DBCB1E354842004962D1 /* ImportViewController.m in Sources */,
 				CDBFF8571E921777009E8A0C /* AnalyzeViewController.m in Sources */,
 				C9C1DBFB1E35704C004962D1 /* NSString+DateFormatter.m in Sources */,
 				C9C1DBED1E3548B0004962D1 /* Effort.m in Sources */,
@@ -345,8 +345,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -389,8 +391,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

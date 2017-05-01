@@ -1,12 +1,12 @@
 //
-//  ViewController.m
+//  ImportViewController.m
 //  GearRatioApp
 //
 //  Created by Sydney Richardson on 1/22/17.
 //  Copyright © 2017 Sydney Richardson. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ImportViewController.h"
 
 #import "AnalyzeViewController.h"
 #import "Effort.h"
@@ -14,15 +14,18 @@
 #import "GPXFileParser.h"
 #import "GraphView.h"
 
-@interface ViewController () <UIGestureRecognizerDelegate>
+@interface ImportViewController () <UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet GraphView *graphView;
 @property (weak, nonatomic) IBOutlet UIButton *analyzeButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *chainringLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cogLabel;
 
 @property (nonatomic, strong) Effort* calculatedEffort;
 
 @end
 
-@implementation ViewController
+@implementation ImportViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +34,7 @@
     [self configureAnalyzeButton];
 }
 
-- (IBAction)didPressCalculateButton:(id)sender
+- (IBAction)didPressResetButton:(id)sender
 {
     self.calculatedEffort = [self configureEffortFromFileName:@"strava_1"];
     
@@ -58,9 +61,17 @@
 {
     if ([segue.identifier isEqualToString:NSStringFromClass([AnalyzeViewController class])]) {
         AnalyzeViewController* analyzeVC = (AnalyzeViewController*)[segue destinationViewController];
-        // this is terrible design but whatever
         [analyzeVC setEffort:self.graphView.effort];
     }
+}
+
+#pragma mark - Stepper outlets
+
+- (IBAction)didChangeChainring:(id)sender {
+    // set the gear ratio, and make sure that it affects the graph view's effort
+}
+
+- (IBAction)didChangeCog:(id)sender {
 }
 
 @end
